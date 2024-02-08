@@ -32,7 +32,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: test-report
-        path: build/reports/tests
+        path: test-output/HtmlReport/ ./HtmlReport
 
   generate-report:
     needs: build
@@ -47,4 +47,4 @@ jobs:
     - name: Generate HTML report
       run: |
         mkdir -p reports
-        cp -r build/reports/tests reports/
+        cp -r test-output/HtmlReport/ ./HtmlReport
