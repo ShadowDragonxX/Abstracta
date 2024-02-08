@@ -1,0 +1,28 @@
+image: openjdk:11
+
+stages:
+  - build
+  - test
+  - report
+
+build:
+  stage: build
+  script:
+    - chmod +x ./gradlew
+    - ./gradlew assemble
+
+test:
+  stage: test
+  script:
+    - chmod +x ./gradlew
+    - ./gradlew test
+
+report:
+  stage: report
+  script:
+    - echo "Generando informe del pipeline..."
+    - cp -r test-output/HtmlReport/ ./HtmlReport
+  artifacts:
+    paths:
+      - HtmlReport/
+  when: always
