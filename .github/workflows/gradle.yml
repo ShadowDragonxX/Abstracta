@@ -25,7 +25,7 @@ jobs:
     - name: Download chromedriver
       run: |
         mkdir -p drivers
-        curl -SL https://chromedriver.storage.googleapis.com/{version}/chromedriver_linux64.zip -o chromedriver_linux64.zip
+        curl -SL https://chromedriver.storage.googleapis.com/100.0.4896.20/chromedriver_linux64.zip -o chromedriver_linux64.zip
         unzip chromedriver_linux64.zip -d drivers
         chmod +x drivers/chromedriver
 
