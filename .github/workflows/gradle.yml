@@ -22,8 +22,17 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew assemble
 
-    - name: Run tests
-      run: ./gradlew test
+    - name: Download chromedriver
+      run: |
+        mkdir -p drivers
+        curl -SL https://chromedriver.storage.googleapis.com/{version}/chromedriver_linux64.zip -o chromedriver_linux64.zip
+        unzip chromedriver_linux64.zip -d drivers
+        chmod +x drivers/chromedriver
+
+    - name: Run tests with chromedriver
+      run: |
+        export PATH=$PATH:$PWD/drivers
+        ./gradlew test
 
     - name: Generate test report
       run: ./gradlew generateTestReport
