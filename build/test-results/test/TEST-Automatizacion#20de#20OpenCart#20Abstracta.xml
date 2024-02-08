@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Automatizacion de OpenCart Abstracta" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-02-08T18:52:25" hostname="CARLOS" time="11.229">
+  <properties/>
+  <testcase name="entrar" classname="Automatizacion de OpenCart Abstracta" time="11.229"/>
+  <system-out><![CDATA[El elemento se encuentra en el carro
+El carro se encuentra vacio
+]]></system-out>
+  <system-err><![CDATA[feb 08, 2024 3:52:26 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+ADVERTENCIA: Unable to find an exact match for CDP version 121, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 121
+]]></system-err>
+</testsuite>
